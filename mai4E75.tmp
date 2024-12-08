@@ -9,7 +9,7 @@
 script = ExtResource("1_84k3t")
 
 [node name="Card" parent="CardManager" instance=ExtResource("2_78mig")]
-position = Vector2(350, 518)
+position = Vector2(262, 314)
 
 [node name="Card2" parent="CardManager" instance=ExtResource("2_78mig")]
-position = Vector2(878, 686)
+position = Vector2(644, 340)
