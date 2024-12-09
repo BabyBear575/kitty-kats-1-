@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm2yh4gadjqb8"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_2jp8v"]
+[ext_resource type="Texture2D" uid="uid://crwpe7hdda6nl" path="res://pngs/Bkgrnd Kats.png" id="1_a6hqb"]
+
+[sub_resource type="SystemFont" id="SystemFont_reuwl"]
+font_names = PackedStringArray("Cascadia Code")
+font_italic = true
+font_weight = 500
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_rf24u"]
+font_names = PackedStringArray("Sitka Small")
+font_weight = 999
+subpixel_positioning = 0
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2jp8v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_a6hqb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 180
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.610564, 0.451063, 0.449065, 1)
+theme_override_colors/font_outline_color = Color(0.49665, 0.358214, 0.476723, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_reuwl")
+theme_override_font_sizes/font_size = 120
+text = "KITTY KATS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="start_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.657752, 0.722004, 0.955357, 1)
+theme_override_fonts/font = SubResource("SystemFont_rf24u")
+theme_override_font_sizes/font_size = 50
+text = "Start Game"
+
+[node name="exit_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.657752, 0.722004, 0.955357, 1)
+theme_override_fonts/font = SubResource("SystemFont_rf24u")
+theme_override_font_sizes/font_size = 50
+text = "Exit Game"
